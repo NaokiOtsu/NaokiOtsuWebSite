@@ -1,0 +1,34 @@
+{
+  "name": "w",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "backbone": "^1.3.3",
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.0",
+    "jquery": "^3.0.0",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.0",
+    "reset-css": "^2.0.2011012603",
+    "run-sequence": "^1.2.1",
+    "underscore": "^1.8.3",
+    "webpack": "^1.13.1",
+    "webpack-stream": "^3.2.0"
+  }
+}

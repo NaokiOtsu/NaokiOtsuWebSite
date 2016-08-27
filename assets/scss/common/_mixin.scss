@@ -1,0 +1,21 @@
+// Retina対応のスプライト画像を生成する
+// $sprite     スプライト画像のインスタンス
+// $pixelRatio ピクセルアスペクト比(デフォルトは2)
+@mixin sprite-bg($sprite, $pixelRatio: 2) {
+	$x:            nth($sprite, 3) / $pixelRatio;
+	$y:            nth($sprite, 4) / $pixelRatio;
+	$width:        nth($sprite, 5) / $pixelRatio;
+	$height:       nth($sprite, 6) / $pixelRatio;
+	$total_width:  nth($sprite, 7) / $pixelRatio;
+	$total_height: nth($sprite, 8) / $pixelRatio;
+	$path:         nth($sprite, 9);
+	
+	width: $width;
+	height: $height;
+	background-image: url($path);
+	background-repeat: no-repeat;
+	background-size: $total_width $total_height;
+	background-position: $x $y;
+}
+
+

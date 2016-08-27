@@ -1,0 +1,15 @@
+//
+// PC全体の共通設定
+//
+
+@import '../common/reset';
+@import '../common/mixin';
+@import '../common/variable';
+
+html { font-size: 62.5%; }
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-size: 1.4rem;
+	line-height: 1.4;
+}

@@ -1,0 +1,1 @@
+webpackJsonp([2],[function(n,o){"use strict";function c(n,o){if(!(n instanceof o))throw new TypeError("Cannot call a class as a function")}var t=function a(){c(this,a),console.log("SP hoge!!")};new t}]);

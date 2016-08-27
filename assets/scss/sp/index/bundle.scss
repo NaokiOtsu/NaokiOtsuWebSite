@@ -1,0 +1,6 @@
+@import '../common';
+@import '../common/sprite/parts';
+
+.test1 {
+	@include sprite($worldwide); // PCのスプライト画像は、「sprite()」を使う
+}
