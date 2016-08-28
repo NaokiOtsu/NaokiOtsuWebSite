@@ -4,3 +4,146 @@
 .test1 {
 	@include sprite($worldwide); // PCのスプライト画像は、「sprite()」を使う
 }
+
+// Loading
+.loading-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	.name-container {
+		position: relative;
+		margin-bottom: 4px;
+		overflow: hidden;
+
+		.my-name-is {
+			font-size: 3.0rem;
+			animation: my-name-is .8s .1s cubic-bezier(0.77, 0, 0.175, 1) both;
+
+			&.hide { animation: my-name-is-hide .8s .5s cubic-bezier(0.77, 0, 0.175, 1) both; }
+		}
+
+		.line {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: black;
+			animation: line .8s cubic-bezier(0.77, 0, 0.175, 1);
+
+			&.hide { animation: line-hide .8s .6s cubic-bezier(0.77, 0, 0.175, 1) both; }
+		}
+	}
+
+	.site-name-container {
+		overflow: hidden;
+		margin-bottom: 10px;
+
+		.site-name {
+			font-size: 1.6rem;
+			transform: translateY(-100%);
+			animation: site-name .8s .2s cubic-bezier(0.77, 0, 0.175, 1) both;
+
+			&.hide { animation: site-name-hide .8s .4s cubic-bezier(0.77, 0, 0.175, 1) both; }
+		}
+	}
+
+	.percent-container {
+		position: relative;
+		width: 102px;
+		height: 102px;
+		margin: 0 auto;
+		animation: percent-container .6s .8s cubic-bezier(0.2, 0.76, 0.21, 1.4) both;
+
+		&.hide { animation: percent-container-hide .6s .3s cubic-bezier(0.77, 0, 0.175, 1) both; }
+	}
+
+	.percent-num {
+		width: 86px;
+		height: 86px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -43px;
+		margin-left: -43px;
+		color: white;
+		font-size: 2.6rem;
+		background: $site-color;
+		border-radius: 50%;
+	}
+}
+
+// show animation
+@keyframes line {
+	0% { transform: scaleX(0); }
+	99%,to { transform: scaleX(1); }
+}
+
+@keyframes my-name-is {
+	0% { transform: translateY(100%); }
+	99%,to { transform: translateY(0); }
+}
+
+@keyframes site-name {
+	0% { transform: translateY(-100%); }
+	99%,to { transform: translateY(0); }
+}
+
+@keyframes percent-container {
+	0% { transform: scale(0); }
+	99%,to { transform: scale(1); }
+}
+
+// hide animation
+@keyframes percent-container-hide {
+	0% { transform: scale(1); }
+	99%,to { transform: scale(0); }
+}
+
+@keyframes site-name-hide {
+	0% { transform: translateY(0); }
+	99%,to { transform: translateY(-100%); }
+}
+
+@keyframes my-name-is-hide {
+	0% { transform: translateY(0); }
+	99%,to { transform: translateY(100%); }
+}
+
+@keyframes line-hide {
+	0% { transform: scaleX(1); }
+	99%,to { transform: scaleX(0); }
+}
+
+.loading-svg {
+	transform: rotate(-90deg);
+}
+
+.loading-circle {
+	fill: transparent;
+	stroke: $site-color;
+	stroke-width: 2;
+	opacity: 0;
+
+	&.animating {
+		opacity: 1;
+		animation: circle 1s 1 cubic-bezier(0.77, 0, 0.175, 1) both;
+	}
+}
+
+@keyframes circle {
+  0% { stroke-dasharray: 0 314; }
+  99.9%,to { stroke-dasharray: 314; }
+}

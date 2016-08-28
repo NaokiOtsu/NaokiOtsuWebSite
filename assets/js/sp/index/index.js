@@ -1,10 +1,12 @@
 // import $ from 'jquery';
-// import _ from 'underscore';
+import Touch from 'Touch';
+import Loading from 'Loading';
 
-class Hoge {
+class Index {
     constructor () {
-        console.log('SP hoge!!');
+        new Touch();
+        new Loading();
     }
 }
 
-new Hoge();
+new Index();
