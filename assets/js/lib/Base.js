@@ -4,7 +4,7 @@ class Base {
     isMobile() {
         return Device.isMobile();
     }
-    
+
     getTouchStartEventName() {
         return Device.isMobile() ? 'touchstart' : 'mousedown';
     }

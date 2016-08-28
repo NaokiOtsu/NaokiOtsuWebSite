@@ -18,7 +18,7 @@ class Touch extends Base {
 
     onTouchStart(event) {
         const $div = $('<div></div>');
-        
+
         let x = this.isMobile() ? event.changedTouches[0].clientX : event.clientX;
         let y = this.isMobile() ? event.changedTouches[0].clientY : event.clientY;
         x = Math.floor(x);
@@ -30,7 +30,7 @@ class Touch extends Base {
             transform: 'scale(0)',
             opacity: 1
         });
-        $div.one('webkitAnimationEnd', function() {
+        $div.one('webkitAnimationEnd', function () {
             $(this).remove();
         });
 

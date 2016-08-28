@@ -3,7 +3,7 @@ import Touch from 'Touch';
 import Loading from 'Loading';
 
 class Index {
-    constructor () {
+    constructor() {
         new Touch();
         new Loading();
     }
